@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     images: ["https://igx.onetools.app/twitter-image.png"],
   },
   verification: {
-    // google: 'your-google-verification-code',
+    google: 'bwEY7i_-HnrUNQviUlnSRCJ2yXY9wHgCHCIgkQUm1Ek',
     // yandex: 'your-yandex-verification-code',
     // bing: 'your-bing-verification-code',
   },
