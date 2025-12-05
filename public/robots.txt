@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://igx.com
+Host: https://igx.onetools.app
 
 # Sitemaps
-Sitemap: https://igx.com/sitemap.xml
+Sitemap: https://igx.onetools.app/sitemap.xml
