@@ -68,8 +68,6 @@ export async function fetchInstagramReel(url: string): Promise<InstagramReelData
     
     const endpointToTry = isReel ? endpoints[0] : endpoints[1];
 
-    console.log('Fetching from:', `${API_BASE_URL}${endpointToTry}`, 'with URL:', cleanUrl);
-
     const response = await axios.post<InstagramApiResponse>(
       `${API_BASE_URL}${endpointToTry}`,
       { url: cleanUrl },
@@ -82,9 +80,6 @@ export async function fetchInstagramReel(url: string): Promise<InstagramReelData
       }
     );
 
-    console.log('API Response Status:', response.status);
-    console.log('API Response Data:', JSON.stringify(response.data, null, 2));
-
     const data = response.data;
 
     // Handle 404 - backend endpoint might not exist
@@ -94,7 +89,7 @@ export async function fetchInstagramReel(url: string): Promise<InstagramReelData
 
     // Handle backend errors
     if (response.status >= 400 || !data || data.success === false) {
-      const errorMsg = data?.error_message || data?.detail || 'Failed to fetch content from Instagram';
+      const errorMsg = data?.error_message  || 'Failed to fetch content from Instagram';
       throw new Error(errorMsg);
     }
 
