@@ -68,13 +68,13 @@ cp .env.local.example .env.local
 ```
 
 Edit `.env.local` and configure:
-- `SITE_URL`: Your production domain (default: https://igx.com)
+- `SITE_URL`: Your production domain (default: https://igx.onetools.app)
 - `NEXT_PUBLIC_GA_ID`: Your Google Analytics 4 Measurement ID (format: G-XXXXXXXXXX)
 - `NEXT_PUBLIC_API_URL`: FastAPI backend URL (default: http://127.0.0.1:8000)
 
 Example `.env.local`:
 ```env
-SITE_URL=https://igx.com
+SITE_URL=https://igx.onetools.app
 NEXT_PUBLIC_GA_ID=G-ABC123XYZ
 NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
 ```
@@ -251,7 +251,7 @@ The app integrates with a FastAPI backend running on `localhost:8000`. The backe
 
 ```env
 # Site Configuration
-SITE_URL=https://igx.com
+SITE_URL=https://igx.onetools.app
 
 # Google Analytics
 # Get your GA4 Measurement ID from https://analytics.google.com/

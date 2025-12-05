@@ -7,7 +7,7 @@
 
 Added footer section with:
 - Regional pricing display (₹500 for India, $9 for international)
-- Contact email: business@igx.com
+- Contact email: business@igx.onetools.app
 - Professional blue background styling
 - Clear call-to-action
 
@@ -238,7 +238,7 @@ Total URLs: **~106**
 - **India**: ₹500
 - **International**: $9 (based on IP detection - to be implemented on backend)
 
-**Contact**: business@igx.com
+**Contact**: business@igx.onetools.app
 
 **Display Location**: Footer (blue background box at bottom)
 
@@ -264,9 +264,9 @@ Total URLs: **~106**
 
 1. **Set Environment Variables** (Production):
    ```env
-   SITE_URL=https://igx.com
+   SITE_URL=https://igx.onetools.app
    NEXT_PUBLIC_GA_ID=G-YOUR-REAL-ID
-   NEXT_PUBLIC_API_URL=https://api.igx.com
+   NEXT_PUBLIC_API_URL=https://api.igx.onetools.app
    ```
 
 2. **Build & Test**:

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Instagram Tips & Tricks Blog | IGX',
     description: 'Expert guides on Instagram Reels, Stories, marketing, and content creation. 100+ articles.',
     type: 'website',
-    url: 'https://igx.com/blog',
+    url: 'https://igx.onetools.app/blog',
   },
   twitter: {
     card: 'summary_large_image',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description: 'Expert guides on Instagram Reels, Stories, marketing, and content creation.',
   },
   alternates: {
-    canonical: 'https://igx.com/blog',
+    canonical: 'https://igx.onetools.app/blog',
   },
 };
 

@@ -8,7 +8,7 @@ Use this checklist before deploying to production.
 
 ### 1. Environment Configuration
 - [ ] Create `.env.local` with production values
-- [ ] Set `SITE_URL` to your production domain (e.g., `https://igx.com`)
+- [ ] Set `SITE_URL` to your production domain (e.g., `https://igx.onetools.app`)
 - [ ] Add Google Analytics ID: `NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX`
 - [ ] Set production FastAPI URL: `NEXT_PUBLIC_API_URL=https://api.yourdomain.com`
 - [ ] Remove or backup any test/development credentials
@@ -26,7 +26,7 @@ Use this checklist before deploying to production.
 - [ ] Measurement ID copied and added to environment
 - [ ] Google Search Console account created
 - [ ] Site ownership verified in Search Console
-- [ ] Sitemap URL ready to submit: `https://igx.com/sitemap.xml`
+- [ ] Sitemap URL ready to submit: `https://igx.onetools.app/sitemap.xml`
 
 ### 4. Technical Checks
 - [ ] Run `pnpm build` successfully
@@ -105,9 +105,9 @@ vercel
 Go to Project Settings → Environment Variables
 
 Add these variables:
-- [ ] `SITE_URL` = `https://igx.com` (your production domain)
+- [ ] `SITE_URL` = `https://igx.onetools.app` (your production domain)
 - [ ] `NEXT_PUBLIC_GA_ID` = `G-XXXXXXXXXX` (your GA4 ID)
-- [ ] `NEXT_PUBLIC_API_URL` = `https://api.igx.com` (your production API)
+- [ ] `NEXT_PUBLIC_API_URL` = `https://api.igx.onetools.app` (your production API)
 
 ### 4. Deploy
 - [ ] Trigger deployment
@@ -131,13 +131,13 @@ Add these variables:
 ### 2. SEO Submission
 - [ ] Submit sitemap to Google Search Console
   - Go to: https://search.google.com/search-console
-  - Add property: https://igx.com
-  - Submit sitemap: https://igx.com/sitemap.xml
+  - Add property: https://igx.onetools.app
+  - Submit sitemap: https://igx.onetools.app/sitemap.xml
   
 - [ ] Submit sitemap to Bing Webmaster Tools
   - Go to: https://www.bing.com/webmasters
-  - Add site: https://igx.com
-  - Submit sitemap: https://igx.com/sitemap.xml
+  - Add site: https://igx.onetools.app
+  - Submit sitemap: https://igx.onetools.app/sitemap.xml
 
 ### 3. Analytics Verification
 - [ ] Check Google Analytics Real-Time view
@@ -148,12 +148,12 @@ Add these variables:
 ### 4. Structured Data Validation
 - [ ] Test with Google Rich Results Test:
   - URL: https://search.google.com/test/rich-results
-  - Enter: https://igx.com
+  - Enter: https://igx.onetools.app
   - Verify all schemas valid (Organization, Website, WebApplication, HowTo)
   
 - [ ] Test with Schema Markup Validator:
   - URL: https://validator.schema.org/
-  - Enter: https://igx.com
+  - Enter: https://igx.onetools.app
   - Fix any warnings
 
 ### 5. Performance Check
@@ -267,7 +267,7 @@ Add these variables:
 - FastAPI Backend: [Your backend team contact]
 
 **Business Inquiries**:
-- Email: business@igx.com
+- Email: business@igx.onetools.app
 
 ---
 
@@ -301,4 +301,4 @@ git push origin main
 
 **Good luck with your launch! 🚀**
 
-For questions: business@igx.com
+For questions: business@igx.onetools.app

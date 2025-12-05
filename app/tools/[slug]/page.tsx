@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: page.title,
       description: page.description,
       type: 'article',
-      url: `https://igx.com/tools/${params.slug}`,
+      url: `https://igx.onetools.app/tools/${params.slug}`,
       siteName: "IGX",
       locale: "en_US",
     },
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: page.description,
     },
     alternates: {
-      canonical: `https://igx.com/tools/${params.slug}`,
+      canonical: `https://igx.onetools.app/tools/${params.slug}`,
     },
   }
 }
@@ -66,9 +66,9 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
   }
 
   const breadcrumbs = [
-    { name: 'Home', url: 'https://igx.com' },
-    { name: 'Tools', url: 'https://igx.com/tools' },
-    { name: page.h1, url: `https://igx.com/tools/${page.slug}` },
+    { name: 'Home', url: 'https://igx.onetools.app' },
+    { name: 'Tools', url: 'https://igx.onetools.app/tools' },
+    { name: page.h1, url: `https://igx.onetools.app/tools/${page.slug}` },
   ]
 
   const howToSteps = page.content.steps.map((step, idx) => ({

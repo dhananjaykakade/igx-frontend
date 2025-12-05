@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       publishedTime: post.publishedAt,
       authors: ["IGX Team"],
       tags: post.tags,
-      url: `https://igx.com/blog/${slug}`,
+      url: `https://igx.onetools.app/blog/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       description: post.description,
     },
     alternates: {
-      canonical: `https://igx.com/blog/${slug}`,
+      canonical: `https://igx.onetools.app/blog/${slug}`,
     },
   };
 }

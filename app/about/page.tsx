@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'About Us | IGX - Instagram Reels Downloader Without Ads',
     description: 'Learn about IGX, the #1 free Instagram Reels downloader without ads.',
     type: 'website',
-    url: 'https://igx.com/about',
+    url: 'https://igx.onetools.app/about',
   },
   twitter: {
     card: 'summary',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: 'Learn about IGX, the #1 free Instagram Reels downloader without ads.',
   },
   alternates: {
-    canonical: 'https://igx.com/about',
+    canonical: 'https://igx.onetools.app/about',
   },
 };
 

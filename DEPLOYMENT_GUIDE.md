@@ -61,7 +61,7 @@
 
 1. **In Vercel Project Settings:**
    - Go to "Settings" → "Domains"
-   - Add your domain: `igx.com` or `www.igx.com`
+   - Add your domain: `igx.onetools.app` or `www.igx.onetools.app`
    - Follow DNS configuration instructions
 
 2. **Update DNS Records:**

@@ -20,12 +20,12 @@ export const organizationSchema = {
   '@type': 'Organization',
   name: 'IGX',
   description: 'Instagram Reels Downloader Without Ads - Download Instagram Reels, Posts, IGTV & Stories for free',
-  url: 'https://igx.com',
-  logo: 'https://igx.com/logo.png',
+  url: 'https://igx.onetools.app',
+  logo: 'https://igx.onetools.app/logo.png',
   sameAs: [],
   contactPoint: {
     '@type': 'ContactPoint',
-    email: 'business@igx.com',
+    email: 'trinityconsultancyofficial@gmail.com',
     contactType: 'Customer Service',
   },
 }
@@ -35,12 +35,12 @@ export const websiteSchema = {
   '@type': 'WebSite',
   name: 'IGX',
   description: 'Instagram Reels Downloader Without Ads',
-  url: 'https://igx.com',
+  url: 'https://igx.onetools.app',
   potentialAction: {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://igx.com/?q={search_term_string}',
+      urlTemplate: 'https://igx.onetools.app/?q={search_term_string}',
     },
     'query-input': 'required name=search_term_string',
   },
@@ -51,7 +51,7 @@ export const webApplicationSchema = {
   '@type': 'WebApplication',
   name: 'IGX - Instagram Reels Downloader',
   description: 'Download Instagram Reels without ads. Free Instagram downloader for Reels, Posts, IGTV videos, and Stories.',
-  url: 'https://igx.com',
+  url: 'https://igx.onetools.app',
   applicationCategory: 'MultimediaApplication',
   operatingSystem: 'Any',
   offers: {
@@ -93,7 +93,7 @@ export const articleSchema = (article: {
   '@type': 'Article',
   headline: article.title,
   description: article.description,
-  url: `https://igx.com/blog/${article.slug}`,
+  url: `https://igx.onetools.app/blog/${article.slug}`,
   datePublished: article.datePublished,
   dateModified: article.datePublished,
   author: {
@@ -105,12 +105,12 @@ export const articleSchema = (article: {
     name: 'IGX',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://igx.com/logo.png',
+      url: 'https://igx.onetools.app/logo.png',
     },
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': `https://igx.com/blog/${article.slug}`,
+    '@id': `https://igx.onetools.app/blog/${article.slug}`,
   },
 })
 

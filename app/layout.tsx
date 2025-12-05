@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://igx.com'),
+  metadataBase: new URL('https://igx.onetools.app'),
   title: {
     default: "IGX - Instagram Reels Downloader Without Ads | Free Download Reels, Posts & Stories",
     template: "%s | IGX - Instagram Downloader Without Ads",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "download instagram audio",
     "IGX",
   ],
-  authors: [{ name: "IGX Team", url: "https://igx.com/about" }],
+  authors: [{ name: "IGX Team", url: "https://igx.onetools.app/about" }],
   creator: "IGX",
   publisher: "IGX",
   category: "Social Media Tools",
@@ -66,13 +66,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IGX - Instagram Reels Downloader Without Ads",
     description: "Download Instagram Reels, Posts, IGTV, Stories & Carousels in HD. 100% Free, No Ads, No Watermarks. The fastest Instagram downloader.",
-    url: "https://igx.com",
+    url: "https://igx.onetools.app",
     type: "website",
     siteName: "IGX",
     locale: "en_US",
     images: [
       {
-        url: "https://igx.com/og-image.png",
+        url: "https://igx.onetools.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "IGX - Instagram Downloader Without Ads",
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     title: "IGX - Instagram Reels Downloader Without Ads",
     description: "Download Instagram Reels, Posts, IGTV & Stories in HD. 100% Free, No Ads, No Watermarks.",
     creator: "@IGXapp",
-    images: ["https://igx.com/twitter-image.png"],
+    images: ["https://igx.onetools.app/twitter-image.png"],
   },
   verification: {
     // google: 'your-google-verification-code',

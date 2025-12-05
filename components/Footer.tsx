@@ -105,7 +105,7 @@ export function Footer() {
               <Link href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Youtube className="h-5 w-5" />
               </Link>
-              <Link href="mailto:support@igx.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="mailto:trinityconsultancyofficial@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-5 w-5" />
               </Link>
             </div>
@@ -120,10 +120,10 @@ export function Footer() {
               🚀 Want to build your own Instagram downloader?
             </p>
             <p className="text-sm text-center text-muted-foreground">
-              Purchase our backend scraping script at <span className="font-bold text-blue-600 dark:text-blue-400">$9 (International)</span>
+              Purchase our backend scraping script at <span className="font-bold text-blue-600 dark:text-blue-400">$5 (International)</span>
             </p>
             <p className="text-sm text-center mt-2">
-              Contact: <a href="mailto:business@igx.com" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">business@igx.com</a>
+              Contact: <a href="mailto:trinityconsultancyofficial@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">trinityconsultancyofficial@gmail.com</a>
             </p>
           </div>
         </div>

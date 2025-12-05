@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'FAQ - Frequently Asked Questions | IGX',
     description: 'Find answers to common questions about downloading Instagram content.',
     type: 'website',
-    url: 'https://igx.com/faq',
+    url: 'https://igx.onetools.app/faq',
   },
   twitter: {
     card: 'summary',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: 'Find answers to common questions about downloading Instagram content.',
   },
   alternates: {
-    canonical: 'https://igx.com/faq',
+    canonical: 'https://igx.onetools.app/faq',
   },
 };
 

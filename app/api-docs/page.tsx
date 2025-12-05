@@ -49,7 +49,7 @@ export default function ApiDocsPage() {
               <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
                 <p className="text-sm">
                   <strong>Note:</strong> Direct API access is not yet available to the public.
-                  Please use our web interface at <Link href="/" className="text-primary hover:underline">igx.com</Link> for downloading Instagram content.
+                  Please use our web interface at <Link href="/" className="text-primary hover:underline">igx.onetools.app</Link> for downloading Instagram content.
                 </p>
               </div>
             </CardContent>

@@ -48,8 +48,8 @@ export default function ContactPage() {
                 For general inquiries, bug reports, or feature requests:
               </p>
               <Button asChild className="w-full">
-                <a href="mailto:support@igx.com">
-                  support@igx.com
+                <a href="mailto:trinityconsultancyofficial@gmail.com">
+                  trinityconsultancyofficial@gmail.com
                 </a>
               </Button>
             </CardContent>

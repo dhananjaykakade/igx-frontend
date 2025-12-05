@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'Instagram Downloader Tools - All-in-One IG Tools | IGX',
     description: 'Complete collection of 10+ Instagram downloader tools. 100% free, fast, ad-free.',
     type: 'website',
-    url: 'https://igx.com/tools',
+    url: 'https://igx.onetools.app/tools',
   },
   twitter: {
     card: 'summary_large_image',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: 'Complete collection of 10+ Instagram downloader tools. 100% free, fast, ad-free.',
   },
   alternates: {
-    canonical: 'https://igx.com/tools',
+    canonical: 'https://igx.onetools.app/tools',
   },
 }
 

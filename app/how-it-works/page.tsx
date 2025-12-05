@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'How It Works - Download Instagram in 3 Steps | IGX',
     description: 'Learn how to download Instagram content in 3 simple steps.',
     type: 'website',
-    url: 'https://igx.com/how-it-works',
+    url: 'https://igx.onetools.app/how-it-works',
   },
   twitter: {
     card: 'summary',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: 'Learn how to download Instagram content in 3 simple steps.',
   },
   alternates: {
-    canonical: 'https://igx.com/how-it-works',
+    canonical: 'https://igx.onetools.app/how-it-works',
   },
 };
 

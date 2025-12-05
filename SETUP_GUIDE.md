@@ -15,7 +15,7 @@ cp .env.local.example .env.local
 
 Edit `.env.local`:
 ```env
-SITE_URL=https://igx.com
+SITE_URL=https://igx.onetools.app
 NEXT_PUBLIC_GA_ID=G-YOUR-MEASUREMENT-ID
 NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
 ```
@@ -97,7 +97,7 @@ Static pages in `app/`:
 Footer includes pricing info:
 - **India**: ₹500
 - **International**: $9
-- **Contact**: business@igx.com
+- **Contact**: business@igx.onetools.app
 
 Edit in `components/Footer.tsx` to change pricing or email.
 
@@ -216,7 +216,7 @@ Before going live, verify:
 ## 📧 Support
 
 For backend script purchase or questions:
-- Email: business@igx.com
+- Email: business@igx.onetools.app
 - Pricing: ₹500 (India) / $9 (International)
 
 ---

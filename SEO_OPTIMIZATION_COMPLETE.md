@@ -30,10 +30,10 @@ viewport: {
 **Issue**: Only homepage had canonical URL, but `/tools`, `/blog`, `/reels-downloader` etc. needed their own.
 
 **Verification**:
-- ✅ `/tools` → canonical: `https://igx.com/tools`
-- ✅ `/blog` → canonical: `https://igx.com/blog`
-- ✅ `/tools/[slug]` → canonical: `https://igx.com/tools/${slug}`
-- ✅ `/blog/[slug]` → canonical: `https://igx.com/blog/${slug}`
+- ✅ `/tools` → canonical: `https://igx.onetools.app/tools`
+- ✅ `/blog` → canonical: `https://igx.onetools.app/blog`
+- ✅ `/tools/[slug]` → canonical: `https://igx.onetools.app/tools/${slug}`
+- ✅ `/blog/[slug]` → canonical: `https://igx.onetools.app/blog/${slug}`
 - ✅ All 122 pages have proper canonical URLs
 
 **Impact**: Prevents duplicate content penalties, improves SERP rankings
@@ -123,7 +123,7 @@ const geistMono = Geist_Mono({
 **Solution**:
 ```typescript
 metadata: {
-  metadataBase: new URL('https://igx.com'),  // Moved to top (required first)
+  metadataBase: new URL('https://igx.onetools.app'),  // Moved to top (required first)
   themeColor: "#2563eb",  // Blue theme
   referrer: "origin-when-cross-origin",  // Privacy + SERP trust
   // Icons handled automatically by Next.js from:
@@ -208,7 +208,7 @@ export const revalidate = 3600; // 1 hour
    └─ 7 static pages (/about, /faq, /how-it-works, /blog, /tools, etc.)
 
 ✅ Revalidation: 1 hour (3600s) for all static pages
-✅ Sitemap: https://igx.com/sitemap.xml
+✅ Sitemap: https://igx.onetools.app/sitemap.xml
 ✅ Build time: ~7.5s (TypeScript compilation successful)
 ```
 
@@ -290,14 +290,14 @@ After deploying these changes, expect:
 ## ✅ All Pages Already Have Canonical URLs
 
 Verified that ALL dynamic pages already had canonical URLs implemented:
-- ✅ `/tools` → `https://igx.com/tools`
-- ✅ `/tools/[slug]` → `https://igx.com/tools/${slug}`
-- ✅ `/blog` → `https://igx.com/blog`
-- ✅ `/blog/[slug]` → `https://igx.com/blog/${slug}`
-- ✅ `/about` → `https://igx.com/about`
-- ✅ `/faq` → `https://igx.com/faq`
-- ✅ `/how-it-works` → `https://igx.com/how-it-works`
-- ✅ `/` → `https://igx.com/` (homepage)
+- ✅ `/tools` → `https://igx.onetools.app/tools`
+- ✅ `/tools/[slug]` → `https://igx.onetools.app/tools/${slug}`
+- ✅ `/blog` → `https://igx.onetools.app/blog`
+- ✅ `/blog/[slug]` → `https://igx.onetools.app/blog/${slug}`
+- ✅ `/about` → `https://igx.onetools.app/about`
+- ✅ `/faq` → `https://igx.onetools.app/faq`
+- ✅ `/how-it-works` → `https://igx.onetools.app/how-it-works`
+- ✅ `/` → `https://igx.onetools.app/` (homepage)
 
 No additional changes needed for canonical URLs.
 
