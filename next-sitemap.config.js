@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://igx.com',
+  siteUrl: process.env.SITE_URL || 'https://igx.onetools.app',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   changefreq: 'daily',
