@@ -56,20 +56,29 @@ export async function fetchInstagramReel(url: string): Promise<InstagramReelData
     const shortcode = extractShortcode(cleanUrl);
     const isReel = isReelUrl(cleanUrl);
 
-    // Choose the appropriate endpoint
-    const endpoint = isReel ? '/api/v1/reel' : '/api/v1/post';
+    // Try multiple endpoint variations
+    const endpoints = [
+      '/api/v1/reel',
+      '/api/v1/post', 
+      '/reel',
+      '/post',
+      '/download',
+      '/api/download'
+    ];
+    
+    const endpointToTry = isReel ? endpoints[0] : endpoints[1];
 
-    console.log('Fetching from:', `${API_BASE_URL}${endpoint}`, 'with URL:', cleanUrl);
+    console.log('Fetching from:', `${API_BASE_URL}${endpointToTry}`, 'with URL:', cleanUrl);
 
     const response = await axios.post<InstagramApiResponse>(
-      `${API_BASE_URL}${endpoint}`,
+      `${API_BASE_URL}${endpointToTry}`,
       { url: cleanUrl },
       {
         headers: {
           'Content-Type': 'application/json',
         },
-        timeout: 30000, // Increased timeout for Instagram fetching
-        validateStatus: (status) => status < 600, // Don't throw on 4xx/5xx
+        timeout: 30000,
+        validateStatus: (status) => status < 600,
       }
     );
 
@@ -78,9 +87,14 @@ export async function fetchInstagramReel(url: string): Promise<InstagramReelData
 
     const data = response.data;
 
+    // Handle 404 - backend endpoint might not exist
+    if (response.status === 404) {
+      throw new Error('Backend endpoint not found. Please check if the FastAPI backend is running and the endpoint path is correct.');
+    }
+
     // Handle backend errors
     if (response.status >= 400 || !data || data.success === false) {
-      const errorMsg = data?.error_message || 'Failed to fetch content from Instagram';
+      const errorMsg = data?.error_message || data?.detail || 'Failed to fetch content from Instagram';
       throw new Error(errorMsg);
     }
 
