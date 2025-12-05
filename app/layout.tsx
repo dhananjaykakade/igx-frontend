@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
+import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -19,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://igx.onetools.app'),
+  metadataBase: new URL('https://igx.onetools.app/'),
   title: {
     default: "IGX - Instagram Reels Downloader Without Ads | Free Download Reels, Posts & Stories",
     template: "%s | IGX - Instagram Downloader Without Ads",
@@ -105,40 +107,47 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RSTZPZG47" />
-        <script dangerouslySetInnerHTML={{
-          __html: `
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background scroll-smooth antialiased`}
+        suppressHydrationWarning
+      >
+        {/* Google Analytics */}
+        <Script 
+          src="https://www.googletagmanager.com/gtag/js?id=G-8RSTZPZG47" 
+          strategy="afterInteractive" 
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-8RSTZPZG47');
-          `
-        }} />
+          `}
+        </Script>
+
         {/* Google Tag Manager */}
-        <script dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PTQ38KKD');`
-        }} />
-        {/* End Google Tag Manager */}
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background scroll-smooth antialiased`}
-      >
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PTQ38KKD');
+          `}
+        </Script>
+
         {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe 
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PTQ38KKD"
-            height="0" 
-            width="0" 
-            style={{display: 'none', visibility: 'hidden'}}
-          />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
+        <Suspense>
+          <noscript>
+            <iframe 
+              src="https://www.googletagmanager.com/ns.html?id=GTM-PTQ38KKD"
+              height="0" 
+              width="0" 
+              style={{display: 'none', visibility: 'hidden'}}
+            />
+          </noscript>
+        </Suspense>
+
         <GoogleAnalytics />
         <Navbar />
         {children}
