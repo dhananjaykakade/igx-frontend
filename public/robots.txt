@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://igx.com
+
+# Sitemaps
+Sitemap: https://igx.com/sitemap.xml

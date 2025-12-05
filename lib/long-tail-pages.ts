@@ -1,0 +1,226 @@
+export const longTailPages = [
+  {
+    slug: 'download-instagram-reel-from-private-account',
+    title: 'Download Instagram Reels from Private Account | IGX',
+    description: 'Learn how to download Instagram Reels from private accounts safely and legally. Step-by-step guide for downloading private Instagram content.',
+    keyword: 'private reel download',
+    h1: 'Download Instagram Reels from Private Account',
+    content: {
+      intro: 'Downloading Instagram Reels from private accounts requires special considerations. While you cannot download content from private accounts without permission, here\'s what you need to know.',
+      steps: [
+        'Follow the private account and wait for approval',
+        'Once approved, you can view and download their public-facing Reels',
+        'Use IGX to download Reels from accounts you have access to',
+        'Always respect privacy and copyright',
+      ],
+      tips: [
+        'Never use third-party tools claiming to access private content',
+        'Respect the account owner\'s privacy settings',
+        'Only download content you have permission to save',
+      ],
+    },
+  },
+  {
+    slug: 'download-reels-without-watermark',
+    title: 'Download Instagram Reels Without Watermark | HD Quality | IGX',
+    description: 'Download Instagram Reels without watermark in HD quality. Remove Instagram watermark from Reels videos instantly and free.',
+    keyword: 'reel no watermark download',
+    h1: 'Download Instagram Reels Without Watermark',
+    content: {
+      intro: 'IGX allows you to download Instagram Reels without any watermarks. Get clean, HD quality videos perfect for reposting or personal use.',
+      steps: [
+        'Copy the Instagram Reel URL from the app',
+        'Paste the URL into IGX downloader',
+        'Click download to get watermark-free video',
+        'Save to your device in HD quality',
+      ],
+      benefits: [
+        'No Instagram watermark on downloaded videos',
+        'Full HD quality preservation',
+        'Fast download speed',
+        'No registration required',
+        'Completely free',
+      ],
+    },
+  },
+  {
+    slug: 'dp-downloader-full-hd',
+    title: 'Instagram DP Downloader Full HD | Download Profile Picture | IGX',
+    description: 'Download Instagram profile pictures in full HD quality. Get high-resolution Instagram DP without cropping or quality loss.',
+    keyword: 'insta dp full hd download',
+    h1: 'Instagram DP Downloader - Full HD Profile Pictures',
+    content: {
+      intro: 'Download any Instagram profile picture in full HD resolution. IGX provides the highest quality DP downloads without any restrictions.',
+      steps: [
+        'Enter the Instagram username',
+        'View the full-size profile picture',
+        'Download in original HD quality',
+        'Save to your device instantly',
+      ],
+      features: [
+        'Full HD resolution support',
+        'No quality loss or compression',
+        'Works with public profiles',
+        'Fast and secure downloads',
+      ],
+    },
+  },
+  {
+    slug: 'download-instagram-audio',
+    title: 'Download Instagram Reel Audio | Extract Audio from Reels | IGX',
+    description: 'Extract and download audio from Instagram Reels. Save Instagram Reel music and sounds in MP3 format.',
+    keyword: 'insta audio download',
+    h1: 'Download Audio from Instagram Reels',
+    content: {
+      intro: 'Extract high-quality audio from Instagram Reels and save as MP3. Perfect for getting trending sounds and music from Reels.',
+      steps: [
+        'Copy the Instagram Reel URL',
+        'Paste into IGX audio extractor',
+        'Select audio-only download option',
+        'Download MP3 file to your device',
+      ],
+      useCases: [
+        'Save trending Reel sounds',
+        'Create custom ringtones',
+        'Use audio for your own content',
+        'Build a music collection',
+      ],
+    },
+  },
+  {
+    slug: 'instagram-profile-photo-full-size',
+    title: 'View Instagram Profile Photo Full Size | HD Viewer | IGX',
+    description: 'View and download Instagram profile photos in full size. See Instagram DP in original high resolution.',
+    keyword: 'profile full size image',
+    h1: 'Instagram Profile Photo Full Size Viewer',
+    content: {
+      intro: 'View Instagram profile pictures in their full original size. No more small, cropped thumbnails - see every detail in HD.',
+      steps: [
+        'Enter Instagram username',
+        'View profile photo in full resolution',
+        'Zoom to see all details',
+        'Download in original size',
+      ],
+      advantages: [
+        'Original resolution viewing',
+        'No image quality loss',
+        'Works instantly',
+        'No app installation needed',
+      ],
+    },
+  },
+  {
+    slug: 'reel-downloader-by-link',
+    title: 'Instagram Reel Downloader by Link | Paste URL & Download | IGX',
+    description: 'Download Instagram Reels by simply pasting the link. Fast, easy, and free Reel downloader using direct URL.',
+    keyword: 'reel download link',
+    h1: 'Download Instagram Reels by Link',
+    content: {
+      intro: 'The easiest way to download Instagram Reels - just paste the link. No complicated steps, no registration required.',
+      steps: [
+        'Open Instagram and find the Reel',
+        'Copy the Reel link/URL',
+        'Paste the link into IGX',
+        'Click download and save',
+      ],
+      whyUseIGX: [
+        'Simplest download method',
+        'Works with any Reel link',
+        'No ads or popups',
+        'Instant downloads',
+        'HD quality preserved',
+      ],
+    },
+  },
+  {
+    slug: 'download-instagram-story',
+    title: 'Download Instagram Story | Save IG Stories Anonymously | IGX',
+    description: 'Download Instagram Stories anonymously. Save Instagram Stories from any public account without them knowing.',
+    keyword: 'instagram story download',
+    h1: 'Download Instagram Stories Anonymously',
+    content: {
+      intro: 'Save Instagram Stories from any public account without leaving a trace. Download Stories in full quality.',
+      steps: [
+        'Copy the Story URL or username',
+        'Paste into IGX Story downloader',
+        'View all available Stories',
+        'Download anonymously',
+      ],
+      features: [
+        'Anonymous viewing and downloading',
+        'No login required',
+        'Save before Stories disappear',
+        'Full HD quality',
+      ],
+    },
+  },
+  {
+    slug: 'download-instagram-highlights',
+    title: 'Download Instagram Highlights | Save Story Highlights | IGX',
+    description: 'Download Instagram Story Highlights in HD. Save entire highlight reels or individual stories easily.',
+    keyword: 'instagram highlights download',
+    h1: 'Instagram Highlights Downloader',
+    content: {
+      intro: 'Save Instagram Highlights permanently. Download entire highlight collections or individual stories.',
+      steps: [
+        'Enter the Instagram username',
+        'View all Highlights',
+        'Select Highlights to download',
+        'Save all stories in HD',
+      ],
+      benefits: [
+        'Download entire Highlights',
+        'Save stories permanently',
+        'HD quality preservation',
+        'Bulk download support',
+      ],
+    },
+  },
+  {
+    slug: 'download-instagram-video',
+    title: 'Download Instagram Video | Save IG Videos in HD | IGX',
+    description: 'Download Instagram videos in HD quality. Save Instagram video posts, IGTV, and Reels easily.',
+    keyword: 'instagram video download',
+    h1: 'Instagram Video Downloader - All Formats',
+    content: {
+      intro: 'Download any Instagram video format - Posts, IGTV, Reels, or Stories. All in high definition.',
+      steps: [
+        'Copy any Instagram video URL',
+        'Paste into IGX downloader',
+        'Select video quality',
+        'Download to device',
+      ],
+      supportedFormats: [
+        'Instagram Feed Videos',
+        'IGTV Long Videos',
+        'Instagram Reels',
+        'Story Videos',
+        'Live Video Replays',
+      ],
+    },
+  },
+  {
+    slug: 'instagram-carousel-downloader',
+    title: 'Instagram Carousel Downloader | Download Multiple Photos/Videos | IGX',
+    description: 'Download Instagram carousel posts with multiple photos and videos. Save all images from carousel posts at once.',
+    keyword: 'carousel post download',
+    h1: 'Download Instagram Carousel Posts',
+    content: {
+      intro: 'Download all photos and videos from Instagram carousel posts in one click. Save complete albums easily.',
+      steps: [
+        'Copy carousel post URL',
+        'Paste into IGX',
+        'View all carousel items',
+        'Download all or select specific items',
+      ],
+      features: [
+        'Download all carousel items',
+        'Individual selection option',
+        'Original quality preserved',
+        'Bulk download support',
+      ],
+    },
+  },
+]
+
+export type LongTailPage = typeof longTailPages[number]

@@ -1,0 +1,448 @@
+{
+	"info": {
+		"_postman_id": "instagram-api-modular-2025",
+		"name": "Instagram Download API - Modular",
+		"description": "Complete API collection for Instagram content download\n\n**Base URL:** http://localhost:8000\n\n**Features:**\n- Profile information & pictures\n- Posts, Reels, IGTV\n- Stories & Highlights\n- Session management\n\n**Status:** ✅ Server Running on http://0.0.0.0:8000",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health & Info",
+			"item": [
+				{
+					"name": "Root - API Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": [""]
+						},
+						"description": "Get API information and available endpoints"
+					}
+				},
+				{
+					"name": "Health Check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/health",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["health"]
+						},
+						"description": "Check API health status and cache stats"
+					}
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login with Cookies (Recommended)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cookie_header\": \"sessionid=YOUR_SESSION_ID; ds_user_id=YOUR_USER_ID; csrftoken=YOUR_CSRF_TOKEN; mid=YOUR_MID; ig_did=YOUR_IG_DID\",\n  \"username\": \"your_instagram_username\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/login",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "login"]
+						},
+						"description": "**ADMIN ONLY**: Login using Instagram cookies (most secure)\n\nGet cookies from:\n1. Open Instagram in Chrome\n2. F12 → Application → Cookies → instagram.com\n3. Copy: sessionid, ds_user_id, csrftoken, mid, ig_did\n\n**Note:** This loads session into ALL 24 loader instances"
+					}
+				},
+				{
+					"name": "Login with Username & Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"your_instagram_username\",\n  \"password\": \"your_password\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/login",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "login"]
+						},
+						"description": "⚠️ **USE HTTPS IN PRODUCTION**\n\nLogin with username and password (less secure than cookies)"
+					}
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Get Profile Info - Public",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/profile/instagram",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "profile", "instagram"]
+						},
+						"description": "Get detailed profile information\n\n**Example usernames:**\n- instagram\n- cristiano\n- leomessi\n- nasa\n\n**Rate Limit:** 20 requests/minute"
+					}
+				},
+				{
+					"name": "Get Profile Info - Celebrity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/profile/cristiano",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "profile", "cristiano"]
+						},
+						"description": "Get Cristiano Ronaldo's profile info"
+					}
+				},
+				{
+					"name": "Get Profile Picture - JSON",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"instagram\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/profile-picture?download=false",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "profile-picture"],
+							"query": [
+								{
+									"key": "download",
+									"value": "false"
+								}
+							]
+						},
+						"description": "Get profile picture URLs (HD and standard)\n\n**Cache:** 3-day TTL"
+					}
+				},
+				{
+					"name": "Download Profile Picture - Direct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"cristiano\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/profile-picture?download=true",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "profile-picture"],
+							"query": [
+								{
+									"key": "download",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Download profile picture as JPEG file"
+					}
+				},
+				{
+					"name": "Get User Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/user-posts/instagram?limit=12",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "user-posts", "instagram"],
+							"query": [
+								{
+									"key": "limit",
+									"value": "12",
+									"description": "Number of posts (1-50)"
+								}
+							]
+						},
+						"description": "Get recent posts from a user's profile\n\n**Limit:** 1-50 posts"
+					}
+				}
+			]
+		},
+		{
+			"name": "Posts & Media",
+			"item": [
+				{
+					"name": "Get Post by URL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\": \"https://www.instagram.com/p/C0vUyJkRzGc/\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/post",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "post"]
+						},
+						"description": "Get post content (images/videos)\n\nSupports:\n- Single images\n- Single videos\n- Carousel posts\n\n**Cache:** 15-day TTL"
+					}
+				},
+				{
+					"name": "Get Post by Shortcode",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"shortcode\": \"C0vUyJkRzGc\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/post",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "post"]
+						},
+						"description": "Get post using shortcode only"
+					}
+				},
+				{
+					"name": "Get Carousel Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\": \"https://www.instagram.com/p/CzMQPOyR8hQ/\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/post",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "post"]
+						},
+						"description": "Get carousel post with multiple images/videos"
+					}
+				},
+				{
+					"name": "Get Reel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\": \"https://www.instagram.com/reel/DMItvFIxAVe/\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/reel",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "reel"]
+						},
+						"description": "Get reel video content\n\n**Rate Limit:** 10 requests/minute\n\n**Validates:** Content must be a video"
+					}
+				},
+				{
+					"name": "Get IGTV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\": \"https://www.instagram.com/tv/CXyZ123456/\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/igtv",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "igtv"]
+						},
+						"description": "Get IGTV video content\n\n**Validates:**\n- Must be GraphVideo\n- Duration > 60 seconds\n- URL contains /tv/"
+					}
+				}
+			]
+		},
+		{
+			"name": "Stories & Highlights",
+			"item": [
+				{
+					"name": "Get User Stories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"instagram\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/stories",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "stories"]
+						},
+						"description": "Get active stories (24-hour expiry)\n\n**Rate Limit:** 5 requests/minute\n\n⚠️ May require login for private accounts"
+					}
+				},
+				{
+					"name": "Get Specific Story by Index",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"instagram\",\n  \"story_index\": 0\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/stories",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "stories"]
+						},
+						"description": "Get a specific story by 0-based index"
+					}
+				},
+				{
+					"name": "Get User Highlights",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"cristiano\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/highlights",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "highlights"]
+						},
+						"description": "Get highlight reels (saved stories)\n\n**Cache:** 7-day TTL"
+					}
+				},
+				{
+					"name": "Get Specific Highlight by Index",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"cristiano\",\n  \"highlight_index\": 0\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/highlights",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8000",
+							"path": ["api", "v1", "highlights"]
+						},
+						"description": "Get a specific highlight by 0-based index"
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
